@@ -1,0 +1,7 @@
+data "oci_network_firewall_network_firewall_policy_tunnel_inspection_rule" "network_firewall_network_firewall_policy_tunnel_inspection_rule_lookup" {
+  for_each = var.network_firewall_network_firewall_policy_tunnel_inspection_rule_lookup
+
+  network_firewall_policy_id  = each.value.network_firewall_policy_id
+  tunnel_inspection_rule_name = each.value.tunnel_inspection_rule_name
+}
+
